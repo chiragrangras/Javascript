@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function in JS Calculate</title>
+  </head>
+  <style>
+    .box{
+        width: 250px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 5px solid black;
+        background-color: aquamarine;
+    }
+    input{
+        margin: 10px;
+        border: 1px solid;
+    }
+    button{
+        margin: 10px 0px 0px 30px;
+        border: 1px solid;
+    }
+  </style>
+  <body>
+    <div class="box">
+        <input type="text" id="first" value="" placeholder="enter your first number.">
+        <br>
+        <input type="text" id="second" value="" placeholder="enter your second number.">
+        <br>
+        <button onclick='plus()'>+</button>
+        <button onclick='sub()'>-</button>
+        <br>
+        <button onclick='div()'>/</button>
+        <button onclick='multi()'>*</button>
+        <br>
+    </div>
+    <script>
+        function plus(){
+            let first = document.getElementById("first").value;
+            let second = document.getElementById("second").value;
+            alert(Number(document.getElementById("first").value) + Number(document.getElementById("second").value));
+        }
+        function sub(){
+            let first = document.getElementById("first").value;
+            let second = document.getElementById("second").value;
+            alert(Number(document.getElementById("first").value) - Number(document.getElementById("second").value));
+        }
+        function div(){
+            let first = document.getElementById("first").value;
+            let second = document.getElementById("second").value;
+            alert(Number(document.getElementById("first").value) / Number(document.getElementById("second").value));
+        }
+        function multi(){
+            let first = document.getElementById("first").value;
+            let second = document.getElementById("second").value;
+            alert(Number(document.getElementById("first").value) * Number(document.getElementById("second").value));
+        }
+    </script>
+  </body>
+</html>
