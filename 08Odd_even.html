@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            var inputStr = prompt("Please Enter your Number.");
+            var inputInt = Number(inputStr);
+            if(!isNaN(inputInt)){
+                if(inputInt % 2 == 0){
+                    alert(`${inputInt} is an Even Number.`);
+                }
+                else{
+                    alert(`${inputInt} is an Odd Number.`);
+                }
+            }
+            else{
+                alert("Please enter vaild Number.");
+            }
+        </script>
+    </body>
+</html>

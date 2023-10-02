@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+            var inputMonthStr = prompt("Please enter your month.");
+            var inputYearStr = prompt("Please enter your year.");
+            var inputMonthInt = Number(inputMonthStr);
+            var inputYearInt = Number(inputYearStr);
+            if(!isNaN(inputMonthInt) && !isNaN(inputYearInt)){
+                if(inputMonthInt >= 1 && inputMonthInt <= 12){
+                    // 1,3,5,7,8,10,12 = 31 days
+                    if([1,3,5,7,8,10,12].includes(inputMonthInt)){
+                        alert(`${inputMonthInt} has 31 days.`);
+                    }
+                    // 4,6,9,11 = 30 days
+                    else if([4,6,9,11].includes(inputMonthInt)){
+                        alert(`${inputMonthInt} has 30 days.`);
+                    }
+                    // 2 in leap year 29 days else 28 days
+                    else{
+                        if(inputYearInt % 4 == 0){
+                            alert(`${inputYearInt} has 29 days.`);
+                        }
+                        else{
+                            alert(`${inputYearInt} has 28 days.`);
+                        }
+                    }
+                }else{
+                    alert("Invaild Month.");
+                }
+            }
+            else{
+                alert("Please enter month and year.");
+            }
+        </script>
+    </body>
+</html>
