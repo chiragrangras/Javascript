@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Sheet</title>
+    <style>
+      .marks {
+        background-color: aliceblue;
+        text-align: center;
+        border: 2px solid black;
+      }
+      .btn{
+        margin: 15px 0px;
+      }
+    </style>
+    <script>
+        function calculate(){
+          const a=parseInt(document.getElementById('sub-1').value);
+          const b=parseInt(document.getElementById('sub-2').value);
+          const c=parseInt(document.getElementById('sub-3').value);
+          const d=parseInt(document.getElementById('sub-4').value);
+          const e=parseInt(document.getElementById('sub-5').value);
+          
+
+          // Validation
+          if(a < 0 || a>100 || b>100 || c>100 || d>100 || e>100){
+            alert("Please enter correct value.");
+          }
+
+          // Compute total
+          const total=a+b+c+d+e;
+          document.getElementById('total').value = total;
+
+          // Compute Percentage
+          const percentage=total*100/500;
+          document.getElementById('percentage').value = percentage;
+
+          let grade;
+          // Compute Grade
+          if(percentage > 80){
+            grade = "Merit";
+            console.log("Merit");
+          }else if (percentage > 70){
+            grade = "Distinction";
+            console.log("Distinction");
+          }else if(percentage > 60){
+            grade = "First Class"
+            console.log("First Class");
+          }else if(percentage > 50){
+            grade = "Second Class";
+            console.log("Second Class");
+          }else if(percentage > 40){
+            grade = "Pass";
+            console.log("Pass");
+          }
+          else{
+            grade = "Fail";
+            console.log("Fail");
+          }
+
+          document.getElementById('grade').value = grade;
+        }
+        
+    </script>
+  </head>
+  <body>
+    <div class="marks">
+      <h1>Marks Sheet</h1>
+      <div class="sub-1">
+        <label>English :-</label>
+        <input id="sub-1" type="number">
+      </div>
+      <div class="sub-2">
+        <label>Math :-</label>
+        <input id="sub-2" type="number">
+      </div>
+      <div class="sub-3">
+        <label>Physics :-</label>
+        <input id="sub-3" type="number">
+      </div>
+      <div class="sub-4">
+        <label>Chemistry :-</label>
+        <input id="sub-4" type="number">
+      </div>
+      <div class="sub-5">
+        <label>Computer :-</label>
+        <input id="sub-5" type="number">
+      </div>
+      <button class="btn" onclick="calculate()">Calculate</button><br>
+        <label>Total :- <input type="number" id="total"></label>
+        <label>Percentage :- <input type="number" id="percentage"></label>
+        <label>Grade :- <input type="text" id="grade"></label>
+      </div>
+    </div>
+  </body>
+</html>
