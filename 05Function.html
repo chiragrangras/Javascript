@@ -25,24 +25,45 @@
   </style>
   <script>
     function plus(){
+      console.log("add event triggered");
         let first = document.getElementById("first").value;
         let second = document.getElementById("second").value;
-        alert(Number(document.getElementById("first").value) + Number(document.getElementById("second").value));
+        document.getElementById("answer").innerText = Number(first) + Number(second);
     }
     function sub(){
         let first = document.getElementById("first").value;
         let second = document.getElementById("second").value;
-        alert(Number(document.getElementById("first").value) - Number(document.getElementById("second").value));
+        document.getElementById("answer").innerText = Number(document.getElementById("first").value) - Number(document.getElementById("second").value);
     }
     function div(){
         let first = document.getElementById("first").value;
         let second = document.getElementById("second").value;
-        alert(Number(document.getElementById("first").value) / Number(document.getElementById("second").value));
+        document.getElementById("answer").innerText = Number(document.getElementById("first").value) / Number(document.getElementById("second").value);
     }
     function multi(){
         let first = document.getElementById("first").value;
         let second = document.getElementById("second").value;
-        alert(Number(document.getElementById("first").value) * Number(document.getElementById("second").value));
+        document.getElementById("answer").innerText = Number(document.getElementById("first").value) * Number(document.getElementById("second").value);
+    }
+
+    function compute(operation){
+      let first = Number(document.getElementById("first").value);
+      let second = Number(document.getElementById("second").value);
+      switch(operation){
+        case "+":
+          document.getElementById("answer").innerHTML = first + second;
+          break;
+        case "-":
+          document.getElementById("answer").innerHTML = first - second;
+          break;
+        case "*":
+          document.getElementById("answer").innerHTML = first * second;
+          break;
+        case "/":
+          document.getElementById("answer").innerHTML = first / second;
+          break;
+      }
+      
     }
 </script>
   <body>
@@ -51,12 +72,13 @@
         <br>
         <input type="text" id="second" placeholder="Enter your second number.">
         <br>
-        <button onclick='plus()'>+</button>
-        <button onclick='sub()'>-</button>
+        <button onclick='compute("+")'>+</button>
+        <button onclick='compute("-")'>-</button>
         <br>
-        <button onclick='div()'>/</button>
-        <button onclick='multi()'>*</button>
+        <button onclick='compute("/")'>/</button>
+        <button onclick='compute("*")'>*</button>
         <br>
+        <div>Answer: <span id="answer"></span></div>
     </div>
   </body>
 </html>
