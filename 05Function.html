@@ -19,14 +19,37 @@
     }
     button{
         margin: 10px 0px 0px 30px;
+        padding: 15px;
         border: 1px solid;
     }
   </style>
+  <script>
+    function plus(){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        alert(Number(document.getElementById("first").value) + Number(document.getElementById("second").value));
+    }
+    function sub(){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        alert(Number(document.getElementById("first").value) - Number(document.getElementById("second").value));
+    }
+    function div(){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        alert(Number(document.getElementById("first").value) / Number(document.getElementById("second").value));
+    }
+    function multi(){
+        let first = document.getElementById("first").value;
+        let second = document.getElementById("second").value;
+        alert(Number(document.getElementById("first").value) * Number(document.getElementById("second").value));
+    }
+</script>
   <body>
     <div class="box">
-        <input type="text" id="first" value="" placeholder="enter your first number.">
+        <input type="text" id="first" placeholder="Enter your first number.">
         <br>
-        <input type="text" id="second" value="" placeholder="enter your second number.">
+        <input type="text" id="second" placeholder="Enter your second number.">
         <br>
         <button onclick='plus()'>+</button>
         <button onclick='sub()'>-</button>
@@ -35,27 +58,5 @@
         <button onclick='multi()'>*</button>
         <br>
     </div>
-    <script>
-        function plus(){
-            let first = document.getElementById("first").value;
-            let second = document.getElementById("second").value;
-            alert(Number(document.getElementById("first").value) + Number(document.getElementById("second").value));
-        }
-        function sub(){
-            let first = document.getElementById("first").value;
-            let second = document.getElementById("second").value;
-            alert(Number(document.getElementById("first").value) - Number(document.getElementById("second").value));
-        }
-        function div(){
-            let first = document.getElementById("first").value;
-            let second = document.getElementById("second").value;
-            alert(Number(document.getElementById("first").value) / Number(document.getElementById("second").value));
-        }
-        function multi(){
-            let first = document.getElementById("first").value;
-            let second = document.getElementById("second").value;
-            alert(Number(document.getElementById("first").value) * Number(document.getElementById("second").value));
-        }
-    </script>
   </body>
 </html>
