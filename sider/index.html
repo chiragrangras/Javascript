@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sider in JS</title>
+    <style>
+        #btn{
+            text-align: center;
+            margin-top: 15px;
+            font-size: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="" id="img">
+    </div>
+    <button id="btn" onclick="back()">Back</button>
+    <button id="btn" onclick="next()">Next</button>
+
+    <script>
+        let i = 0;
+        let arr = ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg']
+        let img = document.getElementById("img")
+        document.getElementById("img").style.height= '530px'
+        document.getElementById("img").style.width= '1200px'
+
+        function next(){
+            if(i == 4){
+              i=0  
+            }
+            i++
+            img.src = arr[i]
+        }
+
+        function back(){
+            if(i == 0){
+              i=3
+            }
+            i--
+            img.src = arr[i]
+        }
+    </script>
+</body>
+</html>
