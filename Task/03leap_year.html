@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        var leapYearStr = alert("Please Enter Year.");
+        var leapYearStr = prompt("Please Enter Year.");
         var leapYearInt = Number(leapYearStr);
         if (!isNaN(leapYearInt)) {
             if (leapYearInt < 0) {
@@ -20,7 +20,7 @@
                 alert(`${leapYearInt} is a not leapyear.`);
             }
         } else {
-            alert("Please enter vaild year only.");
+            prompt("Please enter vaild year only.");
         }
     </script>
 </body>
