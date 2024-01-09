@@ -8,13 +8,18 @@
   <body style="background-color: rgb(244, 255, 244)">
     <div class="container">
       <h1>BMI Calculator</h1>
+      <!-- Option for providing height 
+            and weight to the user-->
       <p>Height (in cm)</p>
+
       <input type="text" id="height" />
+
       <p>Weight (in kg)</p>
+
       <input type="text" id="weight" />
-      <br />
-      <br />
+
       <button id="btn">Calculator</button>
+
       <div id="result"></div>
     </div>
   </body>
@@ -28,10 +33,10 @@
 
     function calculateBMI() {
       /* Getting input from user into height variable.
-    Input is string so typecasting is necessary. */
+      Input is string so typecasting is necessary. */
       let height = parseInt(document.querySelector("#height").value);
       /* Getting input from user into weight variable.
-    Input is string so typecasting is necessary.*/
+      Input is string so typecasting is necessary.*/
       let weight = parseInt(document.querySelector("#weight").value);
       let result = document.querySelector("#result");
       // Checking the user providing a proper
