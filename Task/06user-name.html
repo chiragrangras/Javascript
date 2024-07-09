@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Log In Page</h1>
+        <label for="user">Enter User Name :-</label>
+        <input type="text" id="user">
+        <span id="err1"></span><br><br>
+        <label for="email">Enter Password :-</label>
+        <input type="password" id="pass" onclick="show()">
+        <span id="err2"></span><br><br>
+        <button id="btn">Submit</button>
+    </div>
+</body>
+<script>
+    function show(){
+        var user = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;   
+    }
+</script>
+</html>
